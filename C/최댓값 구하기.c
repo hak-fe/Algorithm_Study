@@ -18,5 +18,6 @@ int main(void) {
 		}
 	}
 	printf("%d\n%d", max, cnt);
+	
 	return 0;
 }
