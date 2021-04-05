@@ -4,17 +4,17 @@
 #include <string>
 using namespace std;
 /*
-ÀÌ ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇØ ÇÊ¿äÇÑ °Íµé
-1. Ã¹ ¹ø¤Š, µÎ ¹øÂ° ¼±¼öÀÇ ÀÌ¸§À» ¹ŞÀ» °Í. -> ÀÌ¸§ ¹Ş´Â setName ÇÔ¼ö »ı¼º. °´Ã¼ ¹è¿­ »ı¼ºÀ¸·Î °¢°¢ setNameÇÒ°Í
-2. °¢ ¼±¼ö Â÷·Ê°¡ ¿À¸é enterÅ°¸¦ ÀÔ·Â¹ŞÀ» °Í. -> 2, 3, 4 ¹øÀº GmablingGame »ı¼ºÀÚ¿¡¼­ µ¿½Ã¿¡ ÇØ°áÇÒ °Í
-3. ¿£ÅÍ Å°¸¦ ÀÔ·Â ¹ŞÀ¸¸é ·£´ıÀ¸·Î 0~2 ¼ıÀÚ¸¦ Ãâ·ÂÇÒ°Í.
-4. ·£´ıÀ¸·Î Ãâ·ÂµÈ ¼ıÀÚ¸¦ ÆÇ´ÜÇÏ¿© °°À¸¸é (ÀÌ¸§)´Ô ½Â¸®!!¸¦, ¾Æ´Ï¸é ¾Æ½±±º¿ä!¸¦ Ãâ·Â.
+ì´ ë¬¸ì œë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ í•„ìš”í•œ ê²ƒë“¤
+1. ì²« ë²ˆÂŠ, ë‘ ë²ˆì§¸ ì„ ìˆ˜ì˜ ì´ë¦„ì„ ë°›ì„ ê²ƒ. -> ì´ë¦„ ë°›ëŠ” setName í•¨ìˆ˜ ìƒì„±. ê°ì²´ ë°°ì—´ ìƒì„±ìœ¼ë¡œ ê°ê° setNameí• ê²ƒ
+2. ê° ì„ ìˆ˜ ì°¨ë¡€ê°€ ì˜¤ë©´ enterí‚¤ë¥¼ ì…ë ¥ë°›ì„ ê²ƒ. -> 2, 3, 4 ë²ˆì€ GmablingGame ìƒì„±ìì—ì„œ ë™ì‹œì— í•´ê²°í•  ê²ƒ
+3. ì—”í„° í‚¤ë¥¼ ì…ë ¥ ë°›ìœ¼ë©´ ëœë¤ìœ¼ë¡œ 0~2 ìˆ«ìë¥¼ ì¶œë ¥í• ê²ƒ.
+4. ëœë¤ìœ¼ë¡œ ì¶œë ¥ëœ ìˆ«ìë¥¼ íŒë‹¨í•˜ì—¬ ê°™ìœ¼ë©´ (ì´ë¦„)ë‹˜ ìŠ¹ë¦¬!!ë¥¼, ì•„ë‹ˆë©´ ì•„ì‰½êµ°ìš”!ë¥¼ ì¶œë ¥.
 */
 class Player {
 	string name;
 public:
 	Player();
-	void setName(string name) { this->name = name; }; // ÀÌ¸§À» ÀÔ·Â ¹ŞÀ½
+	void setName(string name) { this->name = name; }; // ì´ë¦„ì„ ì…ë ¥ ë°›ìŒ
 	string getName() { return name; };
 };
 
@@ -31,26 +31,26 @@ public:
 	void playingGame();
 };
 
-GamblingGame::GamblingGame() { // ÀÌ¸§ ÀÔ·ÂÇÏ´Â ºÎºĞ
+GamblingGame::GamblingGame() { // ì´ë¦„ ì…ë ¥í•˜ëŠ” ë¶€ë¶„
 	string playerName;
-	cout << "***** °×ºí¸µ °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù. *****" << endl;
+	cout << "***** ê²œë¸”ë§ ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤. *****" << endl;
 	p = new Player[2];
 	for (int i = 0; i < 2; i++)
 	{
 		if (i == 0) {
-			cout << "Ã¹¹øÂ° ¼±¼ö ÀÌ¸§>>";
+			cout << "ì²«ë²ˆì§¸ ì„ ìˆ˜ ì´ë¦„>>";
 			cin >> playerName;
 			p[i].setName(playerName);
 		}
 		else {
-			cout << "µÎ¹øÂ° ¼±¼ö ÀÌ¸§>>";
+			cout << "ë‘ë²ˆì§¸ ì„ ìˆ˜ ì´ë¦„>>";
 			cin >> playerName;
 			p[i].setName(playerName);
 		}
 	}
 }
 
-void GamblingGame::playingGame() { // 2, 3, 4 ºÎºĞ
+void GamblingGame::playingGame() { // 2, 3, 4 ë¶€ë¶„
 	char ch;
 	int ranArr[3];
 	int isfinish = 0;
@@ -59,7 +59,7 @@ void GamblingGame::playingGame() { // 2, 3, 4 ºÎºĞ
 		for (int i = 0; i < 2; i++)
 		{
 			srand(time(NULL));
-			for (int j = 0; j < 3; j++) // 3¹øµ¹¾Æ°¡´Âµ¥, ranArr ¹è¿­¿¡ ·£´ıÇÑ ¼ıÀÚ¸¦ ³Ö¾îÁÜ.
+			for (int j = 0; j < 3; j++) // 3ë²ˆëŒì•„ê°€ëŠ”ë°, ranArr ë°°ì—´ì— ëœë¤í•œ ìˆ«ìë¥¼ ë„£ì–´ì¤Œ.
 			{
 				ranArr[j] = rand() % 3;
 			}
@@ -77,12 +77,12 @@ void GamblingGame::playingGame() { // 2, 3, 4 ºÎºĞ
 					cout << ranArr[k] << "\t";
 				}
 				if (ranArr[0] == ranArr[1] && ranArr[1] == ranArr[2]) {
-					cout << p[i].getName() << "´Ô ½Â¸®!!";
+					cout << p[i].getName() << "ë‹˜ ìŠ¹ë¦¬!!";
 					isfinish = 1;
 					break;
 				}
 				else
-					cout << "¾Æ½±±º¿ä!" << endl;
+					cout << "ì•„ì‰½êµ°ìš”!" << endl;
 			}
 		}
 		if (isfinish)
