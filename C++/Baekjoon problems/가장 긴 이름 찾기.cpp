@@ -22,5 +22,5 @@ int main(void) {
 			}
 		}
 	}
-	cout << "°¡Àå ±ä ÀÌ¸§Àº " << LongestName <<endl;
+	cout << "Â°Â¡Ã€Ã¥ Â±Ã¤ Ã€ÃŒÂ¸Â§Ã€Âº " << LongestName <<endl;
 }               
