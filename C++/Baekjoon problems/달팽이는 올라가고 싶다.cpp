@@ -7,7 +7,7 @@ int main(void) {
 	int day = 0;
 	cin >> A >> B >> V;
 
-	if (A == V) // A¿Í V°¡ °°À¸¸é 1ÀÏÂ÷¿¡ ¹Ù·Î ¿Ã¶ó°¨
+	if (A == V) // Aì™€ Vê°€ ê°™ìœ¼ë©´ 1ì¼ì°¨ì— ë°”ë¡œ ì˜¬ë¼ê°
 		cout << ++day;
 	else {
 		if ((V - A) % (A - B) == 0) {
