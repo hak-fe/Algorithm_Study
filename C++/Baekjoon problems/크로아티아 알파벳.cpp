@@ -4,11 +4,11 @@
 #include <vector>
 
 using namespace std;
-// Tip - find¿Í replace ÀÌ¿ë
+// Tip - findì™€ replace ì´ìš©
 
 int main() {
-	string inputStr; // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­
-	vector<string> cAlpha = {"c=","c-","dz=","d-","lj","nj","s=","z="}; // Å©·Î¾ÆÆ¼¾Æ ¾ËÆÄºª
+	string inputStr; // ì…ë ¥ë°›ì€ ë¬¸ìì—´
+	vector<string> cAlpha = {"c=","c-","dz=","d-","lj","nj","s=","z="}; // í¬ë¡œì•„í‹°ì•„ ì•ŒíŒŒë²³
 
 	cin >> inputStr;
 
@@ -16,8 +16,8 @@ int main() {
 	{
 		while (true) {
 			if (inputStr.find(cAlpha[i]) != string::npos)
-				// find·Î ¸ø Ã£À¸¸é inputStr.find(cAlpha[i])°¡ npos¸¦ ¹İÈ¯
-				// ¸¸¾à Ã£À¸¸é, ÇØ´ç ÀÎµ¦½º °ª ¹İÈ¯.
+				// findë¡œ ëª» ì°¾ìœ¼ë©´ inputStr.find(cAlpha[i])ê°€ nposë¥¼ ë°˜í™˜
+				// ë§Œì•½ ì°¾ìœ¼ë©´, í•´ë‹¹ ì¸ë±ìŠ¤ ê°’ ë°˜í™˜.
 			{
 				inputStr.replace(inputStr.find(cAlpha[i]), cAlpha[i].length(), "#");
 			}
