@@ -7,12 +7,12 @@ int main(void) {
 	string str;
 	int cnt = 0;
 	int HaveSpaceAtFIrst = false;
-	getline(cin, str); // ÀÌ¿Í °°Àº Çü½ÄÀ¸·Î ³ÖÀ¸¸é stringÀÌ °ø¹éÀ» Æ÷ÇÔÇÔ.
+	getline(cin, str); // ì´ì™€ ê°™ì€ í˜•ì‹ìœ¼ë¡œ ë„£ìœ¼ë©´ stringì´ ê³µë°±ì„ í¬í•¨í•¨.
 	for (int i = 0; i < str.size(); i++) {
 		if (i == 0) {
 			if (str[0] == 32) {
 				HaveSpaceAtFIrst = true;
-				if (str[1] == '\0') // ¿£ÅÍ ´©¸£¸é ³Î¹®ÀÚ µé¾î°£´Ù´Â »ç½ÇÀ» ÀØÁö ¸»ÀÚÇÏ..
+				if (str[1] == '\0') // ì—”í„° ëˆ„ë¥´ë©´ ë„ë¬¸ì ë“¤ì–´ê°„ë‹¤ëŠ” ì‚¬ì‹¤ì„ ìŠì§€ ë§ìí•˜..
 					break;
 				else
 					cnt++;
