@@ -8,7 +8,7 @@ int main(void) {
 	char ch;
 	
 	while (1) {
-		cout << "°è»ê½Ä? ";
+		cout << "Â°Ã¨Â»ÃªÂ½Ã„? ";
 		cin >> FIrst_Num >> ch >> Last_Num;
 		if (ch == '+') {
 			cout << FIrst_Num << " " << ch << " " << Last_Num << " = " << FIrst_Num + Last_Num << endl;
