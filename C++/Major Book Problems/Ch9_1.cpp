@@ -14,10 +14,10 @@ public:
 	Converter(double ratio) { this->ratio = ratio; }
 	void run() {
 		double src;
-		cout << getSourceString() << "À» " << getDestString() << "·Î ¹Ù²ß´Ï´Ù. ";
-		cout << getSourceString() << "À» ÀÔ·ÂÇÏ¼¼¿ä>> ";
+		cout << getSourceString() << "ì„ " << getDestString() << "ë¡œ ë°”ê¿‰ë‹ˆë‹¤. ";
+		cout << getSourceString() << "ì„ ìž…ë ¥í•˜ì„¸ìš”>> ";
 		cin >> src;
-		cout << "º¯È¯ °á°ú : " << convert(src) << getDestString() << endl;
+		cout << "ë³€í™˜ ê²°ê³¼ : " << convert(src) << getDestString() << endl;
 	}
 };
 
@@ -32,10 +32,10 @@ public:
 		return src / ratio;
 	};
 	virtual string getSourceString() {
-		return "¿ø";
+		return "ì›";
 	};
 	virtual string getDestString() {
-		return "´Þ·¯";
+		return "ë‹¬ëŸ¬";
 	};
 };
 
