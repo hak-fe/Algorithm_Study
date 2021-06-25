@@ -26,25 +26,25 @@ public:
 	}
 	void print(int pages) {
 		if (availableCount - pages < 0) {
-			cout << "¿ëÁö°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "ìš©ì§€ê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 			return;
 		}
 		else if (availableInk - pages < 0) {
-			cout << "À×Å©°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "ì‰í¬ê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 			return;
 		}
 		else if (availableCount - pages < 0 || availableInk - pages < 0) {
-			cout << "¿ëÁö¿Í Åä³Ê°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "ìš©ì§€ì™€ í† ë„ˆê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 			return;
 		}
 		else {
-			cout << "ÇÁ¸°Æ®ÇÏ¿´½À´Ï´Ù." << endl;
+			cout << "í”„ë¦°íŠ¸í•˜ì˜€ìŠµë‹ˆë‹¤." << endl;
 			availableCount -= pages;
 			availableInk -= pages;
 		}
 	}
 	void show() {
-		cout << "À×Å©Á¬ : " << model << " ," << manufacturer << " ," << "³²Àº Á¾ÀÌ " << availableCount << "Àå ," << "³²Àº À×Å© " << availableInk << endl;
+		cout << "ì‰í¬ì ¯ : " << model << " ," << manufacturer << " ," << "ë‚¨ì€ ì¢…ì´ " << availableCount << "ì¥ ," << "ë‚¨ì€ ì‰í¬ " << availableInk << endl;
 	}
 };
 
@@ -56,22 +56,22 @@ public:
 	}
 	void print(int pages) {
 		if (availableCount - pages < 0) {
-			cout << "¿ëÁö°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "ìš©ì§€ê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 		}
 		else if (availableToner - pages < 0) {
-			cout << "Åä³Ê°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "í† ë„ˆê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 		}
 		else if (availableCount - pages < 0 || availableToner - pages < 0) {
-			cout << "¿ëÁö¿Í Åä³Ê°¡ ºÎÁ·ÇÏ¿© ÇÁ¸°Æ® ÇÒ ¼ö ¾ø½À´Ï´Ù." << endl;
+			cout << "ìš©ì§€ì™€ í† ë„ˆê°€ ë¶€ì¡±í•˜ì—¬ í”„ë¦°íŠ¸ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 		}
 		else {
-			cout << "ÇÁ¸°Æ®ÇÏ¿´½À´Ï´Ù." << endl;
+			cout << "í”„ë¦°íŠ¸í•˜ì˜€ìŠµë‹ˆë‹¤." << endl;
 			availableCount -= pages;
 			availableToner -= pages;
 		}
 	}
 	void show() {
-		cout << "·¹ÀÌÀú : " << model << " ," << manufacturer << " ," << "³²Àº Á¾ÀÌ " << availableCount << "Àå ," << "³²Àº Åä³Ê " << availableToner << endl;
+		cout << "ë ˆì´ì € : " << model << " ," << manufacturer << " ," << "ë‚¨ì€ ì¢…ì´ " << availableCount << "ì¥ ," << "ë‚¨ì€ í† ë„ˆ " << availableToner << endl;
 	}
 };
 
@@ -79,15 +79,15 @@ int main() {
 	char running = 'y';
 	int printNum, paperNum;
 	InkPrinter IPrinter("Officejet V40", "HP", 5);
-	LaserPrinter LPrinter("SCX-6x45", "»ï¼ºÀüÀÚ", 3);
-	cout << "ÇöÀç ÀÛµ¿ÁßÀÎ 2 ´ëÀÇ ÇÁ¸°ÅÍ´Â ¾Æ·¡¿Í °°´Ù" << endl;
+	LaserPrinter LPrinter("SCX-6x45", "ì‚¼ì„±ì „ì", 3);
+	cout << "í˜„ì¬ ì‘ë™ì¤‘ì¸ 2 ëŒ€ì˜ í”„ë¦°í„°ëŠ” ì•„ë˜ì™€ ê°™ë‹¤" << endl;
 	IPrinter.show();
 	LPrinter.show();
 	cout << endl;
 	while (true) {
 		if (running == 'n')
 			break;
-		cout << "ÇÁ¸°ÅÍ(1:À×Å©Á¬, 2:·¹ÀÌÀú)¿Í ¸Å¼ö ÀÔ·Â>>";
+		cout << "í”„ë¦°í„°(1:ì‰í¬ì ¯, 2:ë ˆì´ì €)ì™€ ë§¤ìˆ˜ ì…ë ¥>>";
 		cin >> printNum >> paperNum;
 		if (printNum == 1) {
 			IPrinter.print(paperNum);
@@ -96,15 +96,15 @@ int main() {
 			LPrinter.print(paperNum);
 		}
 		else {
-			cout << "ÇÁ¸°ÅÍ ¼±ÅÃÀÌ Àß¸øÀÔ·Â µÇ¾ú½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À." << endl;
+			cout << "í”„ë¦°í„° ì„ íƒì´ ì˜ëª»ì…ë ¥ ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤." << endl;
 		}
 		IPrinter.show();
 		LPrinter.show();
 		while (true) {
-			cout << "°è¼Ó ÇÁ¸°Æ® ÇÏ½Ã°Ú½À´Ï±î(y/n)>>";
+			cout << "ê³„ì† í”„ë¦°íŠ¸ í•˜ì‹œê² ìŠµë‹ˆê¹Œ(y/n)>>";
 			cin >> running;
 			if (running != 'y' && running != 'n')
-				cout << "y ¶Ç´Â nÀ» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À." << endl;
+				cout << "y ë˜ëŠ” nì„ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤." << endl;
 			else {
 				cout << endl;
 				break;
