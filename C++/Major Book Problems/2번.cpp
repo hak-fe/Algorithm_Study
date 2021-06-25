@@ -20,12 +20,12 @@ Date::Date(int y, int m, int d) {
 }
 
 Date::Date(string str) {
-	year = stoi(str.substr(0, 4)); // substrÇÔ¼ö
+	year = stoi(str.substr(0, 4)); // substrÃ‡Ã”Â¼Ã¶
 	month = stoi(str.substr(5, 1));
 	day = stoi(str.substr(7, 2));
 }
 void Date::show() {
-	cout << year << "³â" << month << "¿ù" << day << "ÀÏ" << endl;
+	cout << year << "Â³Ã¢" << month << "Â¿Ã¹" << day << "Ã€Ã" << endl;
 }
 int Date::getYear() {
 	return year;
