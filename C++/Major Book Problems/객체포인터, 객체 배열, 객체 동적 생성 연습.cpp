@@ -19,19 +19,19 @@ double Circle::getArea() {
 int main(void) {
 	int r, cnt = 0, numOfCircle;
 
-	cout << "¿øÀÇ °³¼ö >> ";
+	cout << "ì›ì˜ ê°œìˆ˜ >> ";
 	cin >> numOfCircle;
 
 	Circle* p = new Circle[numOfCircle];
 
 	for (int i = 0; i < numOfCircle; i++)
 	{
-		cout << "¿ø " << i + 1 << "ÀÇ ¹ÝÁö¸§ >> ";
+		cout << "ì› " << i + 1 << "ì˜ ë°˜ì§€ë¦„ >> ";
 		cin >> r;
 		p[i].setRadius(r);
 		if (p[i].getArea() > 100)
 			cnt++;
 	}
-	cout << "¸éÀûÀÌ 100º¸´Ù Å« ¿øÀº " << cnt << "°³ ÀÔ´Ï´Ù." << endl;
+	cout << "ë©´ì ì´ 100ë³´ë‹¤ í° ì›ì€ " << cnt << "ê°œ ìž…ë‹ˆë‹¤." << endl;
 	delete []p;
 }
