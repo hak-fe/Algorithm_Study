@@ -39,9 +39,9 @@ int Account::withdraw(int n) {
 int main(void) {
 	Account a("kitae", 1, 5000);
 	a.deposit(50000);
-	cout << a.getOwner() << "ÀÇ ÀÜ¾×Àº" << a.inquiry() << endl;
+	cout << a.getOwner() << "ì˜ ìž”ì•¡ì€" << a.inquiry() << endl;
 	int money = a.withdraw(20000);
-	//¸®ÅÏ ÇÑ ¹ø¸¸ ÇØÁàµµ a°´Ã¼ÀÇ balance¸É¹ö º¯¼ö¿¡¼­ 20000 ÀÌ¶ó´Â °ªÀÌ ¸¶ÀÌ³Ê½º µÈ´Ù.
-	// Áï, returnÀÌ °´Ã¼ aÀÇ ¸â¹ö º¯¼ö¿¡ ¿µÇâÀ» ÁØ´Ù´Â ¶æ!
-	cout << a.getOwner() << "ÀÇ ÀÜ¾×Àº" << a.inquiry() << endl;
+	//ë¦¬í„´ í•œ ë²ˆë§Œ í•´ì¤˜ë„ aê°ì²´ì˜ balanceë§´ë²„ ë³€ìˆ˜ì—ì„œ 20000 ì´ë¼ëŠ” ê°’ì´ ë§ˆì´ë„ˆìŠ¤ ëœë‹¤.
+	// ì¦‰, returnì´ ê°ì²´ aì˜ ë©¤ë²„ ë³€ìˆ˜ì— ì˜í–¥ì„ ì¤€ë‹¤ëŠ” ëœ»!
+	cout << a.getOwner() << "ì˜ ìž”ì•¡ì€" << a.inquiry() << endl;
 }
