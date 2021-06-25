@@ -28,7 +28,7 @@ void  CoffeeVendingMachine::fill() {
 	{
 		tong[i].fill();
 	}
-	cout << "Ä¿ÇÇ " << tong[0].getsize() << " ¹° " << tong[1].getsize() << " ¼³ÅÁ " << tong[2].getsize() << endl;
+	cout << "ì»¤í”¼ " << tong[0].getsize() << " ë¬¼ " << tong[1].getsize() << " ì„¤íƒ• " << tong[2].getsize() << endl;
 	empty = 0;
 }
 
@@ -41,9 +41,9 @@ void CoffeeVendingMachine::selectEspresso() {
 			empty = 1;
 	}
 	if (empty == 0)
-		cout << "¿¡½ºÇÁ·¹¼Ò µå¼¼¿ä " << endl;
+		cout << "ì—ìŠ¤í”„ë ˆì†Œ ë“œì„¸ìš” " << endl;
 	else
-		cout << "¿ø·á°¡ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+		cout << "ì›ë£Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
 	empty = 0;
 };
 void  CoffeeVendingMachine::selectAmericano() {
@@ -57,9 +57,9 @@ void  CoffeeVendingMachine::selectAmericano() {
 			empty = 1;
 	}
 	if (empty == 0)
-		cout << "¾Æ¸Þ¸®Ä«³ë µå¼¼¿ä " << endl;
+		cout << "ì•„ë©”ë¦¬ì¹´ë…¸ ë“œì„¸ìš” " << endl;
 	else
-		cout << "¿ø·á°¡ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+		cout << "ì›ë£Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
 	empty = 0;
 };
 void  CoffeeVendingMachine::selectSugarCoffee() {
@@ -74,22 +74,22 @@ void  CoffeeVendingMachine::selectSugarCoffee() {
 			empty = 1;
 	}
 	if (empty == 0)
-		cout << "¼³ÅÁÄ¿ÇÇ µå¼¼¿ä " << endl;
+		cout << "ì„¤íƒ•ì»¤í”¼ ë“œì„¸ìš” " << endl;
 	else
-		cout << "¿ø·á°¡ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+		cout << "ì›ë£Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
 	empty = 0;
 
 };
 void  CoffeeVendingMachine::show() {
-	cout << "Ä¿ÇÇ " << tong[0].getsize() << " ¹° " << tong[1].getsize() << " ¼³ÅÁ " << tong[2].getsize() << endl;
+	cout << "ì»¤í”¼ " << tong[0].getsize() << " ë¬¼ " << tong[1].getsize() << " ì„¤íƒ• " << tong[2].getsize() << endl;
 
 };
 void  CoffeeVendingMachine::run() {
 
 	int choice = 0;
-	cout << "***** Ä¿ÇÇ ÀÚÆÇ±â¸¦ ÀÛµ¿ÇÕ´Ï´Ù. *****" << endl;
+	cout << "***** ì»¤í”¼ ìžíŒê¸°ë¥¼ ìž‘ë™í•©ë‹ˆë‹¤. *****" << endl;
 	while (true) {
-		cout << "¸Þ´º¸¦ ´­·¯ÁÖ¼¼¿ä(1:¿¡½ºÇÁ·¹¼Ò, 2:¾Æ¸Þ¸®Ä«³ë, 3:¼³ÅÁÄ¿ÇÇ, 4:ÀÜ·®º¸±â, 5:Ã¤¿ì±â)>> ";
+		cout << "ë©”ë‰´ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”(1:ì—ìŠ¤í”„ë ˆì†Œ, 2:ì•„ë©”ë¦¬ì¹´ë…¸, 3:ì„¤íƒ•ì»¤í”¼, 4:ìž”ëŸ‰ë³´ê¸°, 5:ì±„ìš°ê¸°)>> ";
 		cin >> choice;
 		switch (choice)
 		{
@@ -109,7 +109,7 @@ void  CoffeeVendingMachine::run() {
 			fill();
 			break;
 		default:
-			cout << "ÀÔ·ÂÀÌ Àß¸øµÇ¾ú½À´Ï´Ù." << endl;
+			cout << "ìž…ë ¥ì´ ìž˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 			break;
 		}
 	}
