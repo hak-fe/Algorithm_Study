@@ -7,10 +7,10 @@ int main(void) {
 	char str[10001];
 	int NumOfAllAlpha = 0;
 
-	cout << "¿µ¹® ÅØ½ºÆ®¸¦ ÀÔ·ÂÇÏ¼¼¿ä. È÷½ºÅä±×·¥À» ±×¸³´Ï´Ù." << endl
-		<< "ÅØ½ºÆ®ÀÇ ³¡Àº ; ÀÔ´Ï´Ù. 10000±ÛÀÚ ±îÁö °¡´ÉÇÕ´Ï´Ù." << endl;
+	cout << "ì˜ë¬¸ í…ìŠ¤íŠ¸ë¥¼ ìž…ë ¥í•˜ì„¸ìš”. ížˆìŠ¤í† ê·¸ëž¨ì„ ê·¸ë¦½ë‹ˆë‹¤." << endl
+		<< "í…ìŠ¤íŠ¸ì˜ ëì€ ; ìž…ë‹ˆë‹¤. 10000ê¸€ìž ê¹Œì§€ ê°€ëŠ¥í•©ë‹ˆë‹¤." << endl;
 	cin.getline(str, 10001, ';');
-/*			-¿¹½Ã ¹®Àå-
+/*			-ì˜ˆì‹œ ë¬¸ìž¥-
 Wise men say, only fools rush in
 But I can't help, falling in love with you
 
@@ -21,7 +21,7 @@ Like a river flows, surely to the sea
 Darling so it goes, some things aren't meant to be ;
 */
 
-	for (int i = 0; i < strlen(str); i++) // 1. ´ë¹®ÀÚ¸¦ ¼Ò¹®ÀÚ·Î ¹Ù²Ù°í, ÃÑ ¾ËÆÄºª ¼ö¸¦ ¼¼´Â °úÁ¤
+	for (int i = 0; i < strlen(str); i++) // 1. ëŒ€ë¬¸ìžë¥¼ ì†Œë¬¸ìžë¡œ ë°”ê¾¸ê³ , ì´ ì•ŒíŒŒë²³ ìˆ˜ë¥¼ ì„¸ëŠ” ê³¼ì •
 	{
 		if (isalpha(str[i]) == 1 || isalpha(str[i]) == 2) {
 			NumOfAllAlpha++;
@@ -30,8 +30,8 @@ Darling so it goes, some things aren't meant to be ;
 			str[i] = tolower(str[i]);
 		}
 	}
-	cout << "ÃÑ ¾ËÆÄºª ¼ö " << NumOfAllAlpha << endl; //ÀüÃ¼ ¾ËÆÄºª ¼ö Ãâ·Â
-	//str ¹è¿­ÀÇ ¹®ÀÚ¿­ÀÌ ¼Ò¹®ÀÚ·Î Á¤¸® µÇ¾î ÀÖÀ» °ÍÀÌ´Ù.
+	cout << "ì´ ì•ŒíŒŒë²³ ìˆ˜ " << NumOfAllAlpha << endl; //ì „ì²´ ì•ŒíŒŒë²³ ìˆ˜ ì¶œë ¥
+	//str ë°°ì—´ì˜ ë¬¸ìžì—´ì´ ì†Œë¬¸ìžë¡œ ì •ë¦¬ ë˜ì–´ ìžˆì„ ê²ƒì´ë‹¤.
 
 	for (char ch = 'a';ch <= 'z'; ch++)
 	{
@@ -51,4 +51,4 @@ Darling so it goes, some things aren't meant to be ;
 	}
 }
 
-//Âü°í : isalpha ÇÔ¼ö´Â ¼Ò¹®ÀÚ´Â 2, ´ë¹®ÀÚ´Â 1, ¾ËÆÄºªÀÌ ¾Æ´Ï¸é 0À» Ãâ·ÂÇÑ´Ù.
+//ì°¸ê³  : isalpha í•¨ìˆ˜ëŠ” ì†Œë¬¸ìžëŠ” 2, ëŒ€ë¬¸ìžëŠ” 1, ì•ŒíŒŒë²³ì´ ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥í•œë‹¤.
