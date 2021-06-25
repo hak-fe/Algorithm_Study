@@ -8,7 +8,7 @@ public:
 	Circle(int r) { radius = r; };
 	int getRadius() { return radius; }
 	void setRadius(int r) { radius = r; }
-	void show() { cout << "¹İÁö¸§ÀÌ " << radius << "ÀÎ ¿ø" << endl; }
+	void show() { cout << "Â¹ÃÃÃ¶Â¸Â§Ã€ÃŒ " << radius << "Ã€Ã Â¿Ã¸" << endl; }
 
 };
 
