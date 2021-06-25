@@ -45,16 +45,16 @@ public:
 int main() {
 	MyStack mStack(100);
 	int n;
-	cout << "½ºÅÃ¿¡ »ðÀÔÇÒ 5°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¶ó>> ";
+	cout << "ìŠ¤íƒì— ì‚½ìž…í•  5ê°œì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ë¼>> ";
 	for (int i = 0; i < 5; i++)
 	{
 		cin >> n;
 		mStack.push(n);
 	}
-	cout << "½ºÅÃ¿ë·®:" << mStack.capacity() << ", ½ºÅÃÅ©±â:" << mStack.length() << endl;
-	cout << "½ºÅÃÀÇ ¿ø¼Ò¸¦ ¼ø¼­´ë·Î Á¦°ÅÇÏ¿© Ãâ·ÂÇÑ´Ù>> ";
+	cout << "ìŠ¤íƒìš©ëŸ‰:" << mStack.capacity() << ", ìŠ¤íƒí¬ê¸°:" << mStack.length() << endl;
+	cout << "ìŠ¤íƒì˜ ì›ì†Œë¥¼ ìˆœì„œëŒ€ë¡œ ì œê±°í•˜ì—¬ ì¶œë ¥í•œë‹¤>> ";
 	while (mStack.length() != 0) {
 		cout << mStack.pop() << ' ';
 	}
-	cout << endl << "½ºÅÃÀÇ ÇöÀç Å©±â : " << mStack.length() << endl;
+	cout << endl << "ìŠ¤íƒì˜ í˜„ìž¬ í¬ê¸° : " << mStack.length() << endl;
 }
