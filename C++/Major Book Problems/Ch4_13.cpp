@@ -41,19 +41,19 @@ void Histogram::putc(char ch) {
 void Histogram::print() {
 
 
-	for (int i = 0; i < str.length(); i++) // ¼Ò¹®ÀÚ·Î ¹Ù²Ù±â
+	for (int i = 0; i < str.length(); i++) // ì†Œë¬¸ìžë¡œ ë°”ê¾¸ê¸°
 	{
 		if (str[i] >= 65 && str[i] <= 90)
 			str[i] += 32;
 	}
 
-	for (int i = 0; i < str.length(); i++) // ¾ËÆÄºª °¹¼ö ±¸ÇÏ±â
+	for (int i = 0; i < str.length(); i++) // ì•ŒíŒŒë²³ ê°¯ìˆ˜ êµ¬í•˜ê¸°
 	{
 		if (str[i] >= 97 && str[i] <= 122)
 			cnt++;
 	}
 
-	cout << "\n\n" << "ÃÑ ¾ËÆÄºª ¼ö " << cnt << "\n\n";	
+	cout << "\n\n" << "ì´ ì•ŒíŒŒë²³ ìˆ˜ " << cnt << "\n\n";	
 	
 	for (char ch = 'a'; ch <= 'z'; ch++)
 	{
