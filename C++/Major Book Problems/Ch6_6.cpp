@@ -43,18 +43,18 @@ int* ArrayUtility2::remove(int s1[], int s2[], int size, int& retSize) {
 int main(void) {
 	int x[5], y[5], count, *z;
 	ArrayUtility2 a;
-	cout << "Á¤¼ö 5°³¸¦ ÀÔ·ÂÇÏ¶ó. ¹è¿­ x¿¡ »ðÀÔÇÑ´Ù.>>";
+	cout << "ì •ìˆ˜ 5ê°œë¥¼ ìž…ë ¥í•˜ë¼. ë°°ì—´ xì— ì‚½ìž…í•œë‹¤.>>";
 	for (int i = 0; i < 5; i++)
 	{
 		cin >> x[i];
 	}
-	cout << "Á¤¼ö 5°³¸¦ ÀÔ·ÂÇÏ¶ó. ¹è¿­ y¿¡ »ðÀÔÇÑ´Ù.>>";
+	cout << "ì •ìˆ˜ 5ê°œë¥¼ ìž…ë ¥í•˜ë¼. ë°°ì—´ yì— ì‚½ìž…í•œë‹¤.>>";
 	for (int i = 0; i < 5; i++)
 	{
 		cin >> y[i];
 	}
 
-	cout << "ÇÕÄ£ Á¤¼ö ¹è¿­À» Ãâ·ÂÇÑ´Ù" << endl;
+	cout << "í•©ì¹œ ì •ìˆ˜ ë°°ì—´ì„ ì¶œë ¥í•œë‹¤" << endl;
 	z =	a.concat(x, y, 5);
 	for (int i = 0; i < 10; i++)
 	{
@@ -62,7 +62,7 @@ int main(void) {
 	}
 	cout << endl;
 	a.remove(x, y, 5, count);
-	cout << "¹è¿­ x[]¿¡¼­ y[]¸¦ »« °á°ú¸¦ Ãâ·ÂÇÑ´Ù.°³¼ö´Â " << count << endl;
+	cout << "ë°°ì—´ x[]ì—ì„œ y[]ë¥¼ ëº€ ê²°ê³¼ë¥¼ ì¶œë ¥í•œë‹¤.ê°œìˆ˜ëŠ” " << count << endl;
 	
 	z = a.remove(x, y, 5, count);
 	for (int i = 0; i < count; i++)
