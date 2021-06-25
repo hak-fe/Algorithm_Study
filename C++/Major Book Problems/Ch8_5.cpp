@@ -44,16 +44,16 @@ public:
 int main() {
 	MyQueue mQ(100);
 	int n;
-	cout << "Å¥¿¡ »ðÀÔÇÒ 5°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¶ó>> ";
+	cout << "íì— ì‚½ìž…í•  5ê°œì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ë¼>> ";
 	for (int i = 0; i < 5; i++)
 	{
 		cin >> n;
 		mQ.enqueue(n);
 	}
-	cout << "Å¥ÀÇ ¿ë·®:" << mQ.capacity() << ", Å¥ÀÇ Å©±â:" << mQ.length() << endl;
-	cout << "Å¥ÀÇ ¿ø¼Ò¸¦ ¼ø¼­´ë·Î Á¦°ÅÇÏ¿© Ãâ·ÂÇÑ´Ù>> ";
+	cout << "íì˜ ìš©ëŸ‰:" << mQ.capacity() << ", íì˜ í¬ê¸°:" << mQ.length() << endl;
+	cout << "íì˜ ì›ì†Œë¥¼ ìˆœì„œëŒ€ë¡œ ì œê±°í•˜ì—¬ ì¶œë ¥í•œë‹¤>> ";
 	while (mQ.length() != 0) {
 		cout << mQ.dequeue() << ' ';
 	}
-	cout << endl << "Å¥ÀÇ ÇöÀç Å©±â : " << mQ.length() << endl;
+	cout << endl << "íì˜ í˜„ìž¬ í¬ê¸° : " << mQ.length() << endl;
 }
