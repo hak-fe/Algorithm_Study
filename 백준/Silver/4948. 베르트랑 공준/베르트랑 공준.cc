@@ -7,7 +7,6 @@
 using namespace std;
 typedef long long int ll;
 int prime[246913];
-ll isPrime(ll num);
 void getPrime();
 int main() {
 	ios_base::sync_with_stdio(false);
@@ -36,20 +35,5 @@ void getPrime() {
 			if (prime[j])
 				prime[j] = 0;
 		}
-	}
-}
-ll isPrime(ll num) {
-	while (1) {
-		int isPrime = 1;
-		for (ll i = 2; i * i <= num; i++)
-		{
-			if (num % i == 0) {
-				isPrime = 0;
-				break;
-			}
-		}
-		if (isPrime)
-			return num;
-		num++;
 	}
 }
