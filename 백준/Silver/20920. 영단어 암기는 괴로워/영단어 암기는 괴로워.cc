@@ -27,15 +27,13 @@ int main() {
 				mmap[word]++;
 		}
 	}
-
-
 	vector<pair<string, int>> sorted(mmap.begin(), mmap.end());
-	sort(sorted.begin(), sorted.end(), [](const pair<string, int>& a, const pair<string, int>& b) {
-		// 우선순위 1: 빈도수 많은 게 앞으로
+	sort(sorted.begin(), sorted.end(), [](const auto& a, const auto& b) {
+		// 우선순위 1: 빈도수 많은 게 우선
 		if (a.second != b.second)
 			return a.second > b.second;
 
-		// 우선순위 2: 키의 길이 기준 내림차순
+		// 우선순위 2: 단어 길이가 긴 게 우선
 		if (a.first.length() != b.first.length())
 			return a.first.length() > b.first.length();
 
