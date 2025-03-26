@@ -5,23 +5,21 @@
 #include <stack>
 #include <vector>
 using namespace std;
-/*
-	중복없이 수를 입력 받는건 그대로 진행하자.
-	최솟값, 최댓값을 찾아 저장하자.
-	v에 중복없이 수가 저장되어있다.
-	v를 만지작 거리면 풀릴지도..?
-*/
 typedef long long int ll;
+
 int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
+
 	vector<int>v;
 	stack<int>st;
-	int n, input, maxNum, temp = -1;
+	int n, input, maxNum;
 	ll result = 0;
+
 	cin >> n >> input;
 	maxNum = input;
 	v.push_back(input);
+
 	for (int i = 1; i < n; i++)
 	{
 		cin >> input;
@@ -30,6 +28,7 @@ int main() {
 		if (input > maxNum)
 			maxNum = input;
 	}
+
 	for (int i = 0; i < v.size(); i++)
 	{
 		if (st.empty()) {
@@ -47,8 +46,11 @@ int main() {
 			}
 		}
 	}
+
 	if (!st.empty())
 		result += (maxNum - st.top());
+
 	cout << result;
+
 	return 0;
 }
