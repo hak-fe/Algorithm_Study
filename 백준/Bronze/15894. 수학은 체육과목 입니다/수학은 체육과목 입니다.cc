@@ -11,6 +11,6 @@ int main() {
 	cin.tie(NULL);
 	long long int n;
 	cin >> n;
-	cout << 2 * n + 2 * (n - 1) + 2;
+	cout << 4 * n;
 	return 0;
 }
