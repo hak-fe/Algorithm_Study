@@ -1,26 +1,29 @@
 #include <iostream>
-#include <algorithm>
+#include <map>
+#include <string>
+#include <stack>
+#include <queue>
+#include <vector>
+#include<algorithm>
+#define DEBUG 1
+#define FASTIO cin.tie(NULL), ios_base::sync_with_stdio(false)
 using namespace std;
-
+typedef long long int ll;
 
 int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);
-
-	int n;
+	FASTIO;
+	int n, temp;
 	cin >> n;
-	int* ary = new int[n];
-
+	vector<int>v;
 	for (int i = 0; i < n; i++)
 	{
-		cin >> ary[i];
+		cin >> temp;
+		v.push_back(temp);
 	}
-
-	sort(ary, ary + n);
-
+	sort(v.begin(), v.end());
 	for (int i = 0; i < n; i++)
 	{
-		cout << ary[i] << '\n';
+		cout << v[i] << '\n';
 	}
+	return 0;
 }
