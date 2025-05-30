@@ -14,7 +14,8 @@
 using namespace std;
 typedef long long int ll;
 
-vector<double>seq;
+vector<ll>seq(250000, 0);
+vector<int>logseq(250000, 0);
 
 double logbase(double a, double b) {
 	return log(a) / log(b);
@@ -22,22 +23,22 @@ double logbase(double a, double b) {
 
 int main() {
 	FASTIO;
-	int n, res = 0;
-	double temp;
+	ll n, res = 0, temp;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
-		cin >> temp;
-		seq.push_back(temp);
+		cin >> seq[i];
 	}
+
 	for (int i = 1; i < n; i++)
 	{
-		if (seq[i - 1] > seq[i]) {
-			double x = ceil(logbase(seq[i - 1] / seq[i], 2));
-			res += (int)x;
-			seq[i] = seq[i] * pow(2, x);
-		}
+		
+		logseq[i] = logseq[i - 1] +
+			ceil(logbase((double)seq[i - 1] / seq[i], 2));
+		logseq[i] = max(logseq[i], 0);
+		res += logseq[i];
 	}
 	cout << res;
+
 	return 0;
 }
