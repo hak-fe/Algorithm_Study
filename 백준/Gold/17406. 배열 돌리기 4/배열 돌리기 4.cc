@@ -16,8 +16,8 @@ using namespace std;
 typedef long long int ll;
 typedef unsigned long long int ull;
 
-vector<char>temp; // 만들 수 있는 모든 순서를 seq에 저장
-vector<string>seq;
+vector<char>temp;
+vector<string>seq; // 만들 수 있는 모든 순서를 seq에 저장
 int visited[7];
 int arr[51][51], realarr[51][51], r[7], c[7], s[7], res = MAX;
 
@@ -26,9 +26,6 @@ void getSeq(int size);
 void spinArr(int x, int y, int maxlen);
 void copyArr(int n, int m);
 int getMinRowSum(int n, int m);
-
-
-
 
 int main() {
 	int n, m, k;
