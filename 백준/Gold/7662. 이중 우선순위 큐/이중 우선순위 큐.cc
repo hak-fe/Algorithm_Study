@@ -30,32 +30,54 @@ int main() {
 	cin >> t;
 
 	while (t--) {
-		multiset<int>ms;
-		/*priority_queue<int, vector<int>>pq_max;
-		priority_queue<int, vector<int>, greater<>>pq_min;*/
+		priority_queue<int, vector<int>>pq_max;
+		priority_queue<int, vector<int>, greater<>>pq_min;
+		map<int, int> m;
 		cin >> k;
 		for (int i = 0; i < k; i++)
 		{
-			
+
 			cin >> op >> input;
 			if (op == 'I') {
-				ms.insert(input);
+				pq_max.push(input);
+				pq_min.push(input);
+				m[input]++;
 			}
 			else {
-				if (!ms.empty()) {
-					if (input == 1) {
-						ms.erase(prev(ms.end()));
+				if (input == 1) {
+					while (!pq_max.empty()) {
+						if (m[pq_max.top()] == 0)
+							pq_max.pop();
+						else {
+							m[pq_max.top()]--;
+							pq_max.pop();
+							break;
+						}
 					}
-					else {
-						ms.erase(ms.begin());
+				}
+				else {
+					while (!pq_min.empty()) {
+						if (m[pq_min.top()] == 0)
+							pq_min.pop();
+						else {
+							m[pq_min.top()]--;
+							pq_min.pop();
+							break;
+						}
 					}
 				}
 			}
 		}
-		if (ms.empty())
+		while (!pq_max.empty() && m[pq_max.top()] == 0) {
+			pq_max.pop();
+		}
+		while (!pq_min.empty() && m[pq_min.top()] == 0) {
+			pq_min.pop();
+		}
+		if (pq_max.empty() || pq_min.empty())
 			cout << "EMPTY" << endl;
-		else 
-			cout << *ms.rbegin() << ' ' << *ms.begin()<< endl;
-		
+		else {
+			cout << pq_max.top() << ' ' << pq_min.top() << endl;
+		}
 	}
 }
