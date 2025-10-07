@@ -63,6 +63,8 @@ pair<int,int> bfs(int n, int m) {
 		int x = coordOfOnes[i].first, y = coordOfOnes[i].second;
 		if (!visited[x][y])
 			res.first++;
+		else 
+			continue;
 		q.push({ x,y });
 		visited[x][y] = 1;
 		while (!q.empty()) {
