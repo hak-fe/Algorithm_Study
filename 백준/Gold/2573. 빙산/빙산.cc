@@ -39,6 +39,7 @@ void printArea(int n, int m) {
 	return;
 }
 int main() {
+	FASTIO;
 	int n, m;
 	cin >> n >> m;
 	grid.assign(n + 1, vector<int>(m + 1));
