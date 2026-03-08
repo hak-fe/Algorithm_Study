@@ -1,42 +1,40 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 #include <vector>
-#include <cmath>
 #include <algorithm>
-#include <utility>
-#include <stack>
-#include <queue>
-#include <deque>
-
-#define MIN 2147483647;
-#define MAX 0; 
-
+#include <cstring>
 using namespace std;
-typedef unsigned long long int ll;
-int item[1001];
-int dp[1001];
-int main() {
 
-	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);
-	
-	int n, res = 0;
-	cin >> n;
-	for (int i = 1; i <= n; i++)
-	{
-		cin >> item[i];
-		dp[i] = 1;
-	}
+#define MAX 10000
+#define DIV 1000000007
+#define FASTIO ios::sync_with_stdio(false), cin.tie(NULL)
+#define endl '\n'
 
-	for (int i = 1; i <= n; i++)
+typedef unsigned long long ull;
+typedef long long ll;
+
+void solve(vector<int>&arr, vector<int>& dp) {
+	int res = 0;
+	for (int i = 0; i < arr.size(); i++)
 	{
-		for (int j = 1; j < i; j++)
-		{
-			if (item[i] > item[j])
+		for (int j = 0; j < i; j++) {
+			if (arr[i] > arr[j]) {
 				dp[i] = max(dp[i], dp[j] + 1);
+			}
 		}
 		res = max(res, dp[i]);
 	}
+
 	cout << res;
+}
+
+int main() {
+	FASTIO;
+	int n;
+	cin >> n;
+	vector<int>arr(n);
+	vector<int>dp(n, 1);
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+	solve(arr, dp);
+	return 0;
 }
