@@ -28,7 +28,8 @@ void f(int n) {
 
 	for (int i = 3; i <= n; i++)
 	{
-		for (int s = 1, e = i + s - 1; e <= n; s++, e++){
+		for (int s = 1; s + i - 1 <= n; s++) {
+			int e = s + i - 1;
 			if (seq[s] == seq[e] && dp[s + 1][e - 1])
 				dp[s][e] = 1;
 		}
